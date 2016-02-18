@@ -1,0 +1,158 @@
+/* 
+    Document   : newCascadeStyleSheet
+    Created on : 3/08/2012, 08:55:00 AM
+    Author     : CDS-UTEZ
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+#menuPrincipal {
+    top: -50px; left: -0px; padding: 0; margin: 0 auto; list-style: none; position: relative; width: 500px; min-height:500px;
+}
+
+#prueba{
+    top: 50px; left: -3%; position: absolute; z-index: 0; 
+}
+
+#flecha_0{
+    top: 50px; left: -20; position: absolute; z-index: 0;
+}
+
+#flecha_1{
+    top: 50px; left: -3%; position: absolute; z-index: 0; display: none;
+}
+
+#flecha_2{
+    top: 50px; left: -3%; position: absolute; z-index: 0; display: none;
+}
+              
+#flecha_3{
+    top: 50px; left: -3%; position: absolute; z-index: 0; display: none;
+}
+              
+#flecha_4{
+    top: 50px; left: -3%; position: absolute; z-index: 0; display: none;
+}
+              
+#flecha_5{
+    top: 50px; left: -3%; position: absolute; z-index: 0; display: none;
+}
+
+/* =================== IMAGENES ADMINISTRADOR =================== */
+
+#menuPrincipal li.regUsuarios {
+    left: 23%; top: 0px; background:url(../images/menu/usuarios.png) no-repeat center center;
+}
+
+#menuPrincipal li.tipoReuniones {
+    left: -10%; top: 120px; background:url(../images/menu/tiposReuniones.png) no-repeat center center;
+}
+
+#menuPrincipal li.regMinutas {
+    left: 50%; top: 110px; background:url(../images/menu/registro.png) no-repeat center center;
+}
+
+#menuPrincipal li.segAcuerdos {
+    left: -2%; top: 300px; background:url(../images/menu/seguimiento.png) no-repeat center center;
+}
+
+#menuPrincipal li.historial {
+    left: 45%; top: 300px; background:url(../images/menu/historial.png) no-repeat center center;
+}
+
+/* =================== DESCRIPCIONES ADMINISTRADOR =================== */
+
+#descripciones  {
+    left: 620px; top: 60px; padding: 0; margin: 0 auto; list-style: none; position: relative; width: 200px; height: 90px;
+}
+
+#menuPrincipal li.regUsuarios a:hover b {
+    left: 235%; top: 220px; display: block;
+}
+#menuPrincipal li.tipoReuniones a:hover b {
+    left: 315%; top: 100px; display: block;
+}
+#menuPrincipal li.regMinutas a:hover b {
+    left: 330px; top: 110px; display: block;
+}
+#menuPrincipal li.segAcuerdos a:hover b {
+    left: 580px; top: -80px; display: block;
+}
+#menuPrincipal li.historial a:hover b {
+    left: 360px; top: -80px; display: block;
+}
+
+/* =================== IMAGENES RESPONSABLE =================== */
+
+#menuPrincipal li.regMinutasr {
+    left: 20%; top: 20px; background:url(../images/menu/registro.png) no-repeat center center;
+}
+
+#menuPrincipal li.segAcuerdosr {
+    left:-8%; top: 270px; background:url(../images/menu/seguimiento.png) no-repeat center center;
+}
+
+#menuPrincipal li.historialr {
+    left:48%; top: 265px; background:url(../images/menu/historial.png) no-repeat center center;
+}
+
+/* =================== DESCRIPCIONES ADMINISTRADOR =================== */
+
+#menuPrincipal li.regMinutasr a:hover b {
+    left: 460px; top: 190px; display: block;
+}
+
+#menuPrincipal li.segAcuerdosr a:hover b {
+    left: 610px; top: -60px; display: block;
+}
+
+#menuPrincipal li.historialr a:hover b {
+    left: 330px; top: -55px; display: block;
+}
+
+/* =================== Salir =================== */
+
+#subBanner {
+    width:900px;
+    height:33px;
+    background-image:url(../images/general/sesion.png);
+    display: none;
+}
+
+#subBannerIE {
+    width:900px;
+    height:33px;
+    background-image:url(../images/general/sesion.png);
+}
+
+#banner{
+    width:900px;
+    height:100px;
+    background-image: url(../images/general/banner.jpg);
+    -moz-border-radius: 30px 30px 0px 0px; /* Firefox */
+    -webkit-border-radius: 30px 30px 0px 0px; /* Safari, Chrome */
+    -khtml-border-radius: 30px 30px 0px 0px; /* Konqueror */
+    border-radius: 30px 30px 0px 0px; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3 */
+}
+
+#pie{
+    background:#D8D8D8;
+    margin-top:2px;
+    clear:both;
+    width:900px;
+    height:45px;
+    color: white;
+    font-size: 11px;
+    background-image:url(../images/general/piePagina.gif);
+    -moz-border-radius:  0px 0px 30px 30px; /* Firefox */  
+    -webkit-border-radius: 0px 0px 30px 30px ; /* Safari, Chrome */ 
+    -khtml-border-radius: 0px 0px 30px 30px ; /* Konqueror */   
+     border-radius: 0px 0px 30px 30px ; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3 */
+     box-shadow: 10px 10px 40px #000; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3 */
+
+}

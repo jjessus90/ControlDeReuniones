@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="611" pageHeight="791" columnWidth="527" leftMargin="42" rightMargin="42" topMargin="42" bottomMargin="42" uuid="ed36ef28-6b0a-4337-981c-e01b344d56c3">
+	<property name="ireport.zoom" value="1.6105100000000012"/>
+	<property name="ireport.x" value="230"/>
+	<property name="ireport.y" value="47"/>
+	<parameter name="minuta" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\027-ControlDeReuniones\\ControlDeReuniones\\web-app\\reports\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RUTA" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     minuta.`identificador` AS minuta_identificador
+FROM
+     `minuta` minuta
+WHERE
+     minuta.`id` = $P{minuta}]]>
+	</queryString>
+	<field name="minuta_identificador" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="16" splitType="Stretch">
+			<textField>
+				<reportElement uuid="d45c1461-6919-4ee3-91e1-f90f48bcd8c7" x="13" y="-2" width="262" height="17"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{minuta_identificador}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="4248280c-e3a7-472f-b014-2b3777776fb2" x="358" y="-20" width="100" height="20" forecolor="#FFFFFF"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$P{minuta}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0f2681a5-dc59-4288-9c7b-6e13040f4186" x="13" y="-22" width="133" height="20"/>
+				<textElement>
+					<font fontName="DejaVu Sans" size="12"/>
+				</textElement>
+				<text><![CDATA[Minuta]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="80" splitType="Stretch">
+			<subreport>
+				<reportElement uuid="11ab395a-588b-46ce-81ec-0cca8837f5b8" x="0" y="2" width="527" height="76"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="minuta">
+					<subreportParameterExpression><![CDATA[$P{minuta}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{RUTA}+"Minuta_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="80">
+			<subreport>
+				<reportElement uuid="0af123c9-c139-4143-9b8f-4c5816c5db43" x="0" y="2" width="527" height="74"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="minuta">
+					<subreportParameterExpression><![CDATA[$P{minuta}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{RUTA}+"Minuta_subreport2.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="86">
+			<subreport>
+				<reportElement uuid="4a2fb6ff-4111-4a6e-801f-3b9aa3e00b82" x="0" y="2" width="527" height="84"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="minuta">
+					<subreportParameterExpression><![CDATA[$P{minuta}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{RUTA}+"Minuta_subreport3.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="136">
+			<subreport>
+				<reportElement uuid="b095b08d-5c06-404a-a6bc-0bc9019767b1" x="-1" y="3" width="527" height="83"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="minuta">
+					<subreportParameterExpression><![CDATA[$P{minuta}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="RUTA">
+					<subreportParameterExpression><![CDATA[$P{RUTA}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{RUTA}+"Minuta_subreport4.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="32">
+			<image>
+				<reportElement uuid="1f7bb7d3-385d-4b1d-bccd-8304936d7f09" x="0" y="0" width="527" height="31"/>
+				<imageExpression><![CDATA["/home/jjessus90/Descargas/pleca.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

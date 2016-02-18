@@ -1,0 +1,2 @@
+<h2>Descarga de archivos</h2><br/>
+<g:link style="width:300px;color:black" action="downloadFile" id="${minutaInstace?.id}" params="['id':minutaInstance?.id,'identificador':minutaInstance?.identificador]" value="${minutaInstance?.upload}"  >Control De Reuniones</g:link>

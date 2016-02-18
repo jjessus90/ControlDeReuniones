@@ -1,0 +1,578 @@
+/* FONT STACK */
+body, input, select, textarea {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.estilotextarea{width: 10px; height: 10px;}
+/* ::::: ESTILO BASE ::::: */
+body {
+    background: url(../images/general/fondo.gif);
+}
+
+img {
+    border: 0;
+}
+
+#prueba{
+    top: 20px; left: -8%; position: absolute; z-index: 0;
+}
+
+#flecha_0{
+    top: 20px; left: -8%;  position: absolute; z-index: 0; display: block;
+}
+
+#flecha_1{
+    top: 20px; left: -8%; position: absolute; z-index: 0; display: none;
+}
+
+#flecha_2{
+    top: 20px; left: -8%; position: absolute; z-index: 0; display: none;
+}
+              
+#flecha_3{
+    top: 20px; left: -8%; position: absolute; z-index: 0; display: none;
+}
+              
+#flecha_4{
+    top: 20px; left: -8%; position: absolute; z-index: 0; display: none;
+}
+              
+#flecha_5{
+    top: 20px; left: -8%; position: absolute; z-index: 0; display: none;
+}
+
+              
+              
+
+        
+
+#contenedorGral {
+    margin-top:1000px;
+    margin: 0 auto;
+    width:900px;
+    height:650px;
+    position: absolute;
+    top:0%;
+    left: 50%;
+    margin-top: 0px;
+    margin-left: -450px;
+}
+
+#banner{
+    width:900px;
+    height:100px;
+    background-image: url(../images/general/banner.jpg);
+    -moz-border-radius: 30px 30px 0px 0px; /* Firefox */
+    -webkit-border-radius: 30px 30px 0px 0px; /* Safari, Chrome */
+    -khtml-border-radius: 30px 30px 0px 0px; /* Konqueror */
+    border-radius: 30px 30px 0px 0px; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3 */
+}
+
+#logoUtez{
+    width:185px;
+    height:90px;
+    float:right;
+    margin-right:30px;
+    margin-top:15px;
+}
+
+#logoLogOut{
+    width:17px;
+    height:22px;
+    float:right;
+    margin-right:43px;
+    margin-top:1px;
+    position: relative;
+}
+
+#logoMenuBackt{
+    width:17px;
+    height:22px;
+    float:right;
+    margin-right:30px;
+    margin-top:3px;
+    position: relative;
+}
+
+#usuario{
+    position: relative;
+    top: -23px;
+}
+
+#titulo{
+    width:400px;
+    height:60px;
+    float:left;
+    margin-top:32px;
+    margin-left: 80px;
+    text-align: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+
+#cuerpoPrincipal{
+    width:900px;
+    min-height:500px; 
+    height: auto;
+    background:#D8D8D8;
+    margin-top:2px;
+}
+
+#cuerpoPrincipalMinuta{
+    width:900px;
+    height:500px;
+    background:#D8D8D8;
+    margin-top:2px;
+}
+
+#cuerpoPrincipalMenus{
+    width:900px;
+    height:500px;
+    background:#D8D8D8;
+    margin-top:2px;   
+}
+
+#cuerpoTabla{
+    width:900px;
+    height:auto;
+}
+
+#subBanner {
+    width:900px;
+    height:33px;
+    background-image:url(../images/general/sesion.png);
+}
+
+a:link, a:visited, a:hover {
+    color: white;/*#0B615E;*/
+    text-decoration:none;
+}
+
+.salir:link, .salir:visited, .salir:hover {
+    color: white;
+    text-decoration:none;
+}
+
+#pie{
+    background:#D8D8D8;
+    margin-top:2px;
+    clear:both;
+    width:900px;
+    height:45px;
+    color: white;
+    font-size: 11px;
+    background-image:url(../images/general/piePagina.gif);
+    -moz-border-radius:  0px 0px 30px 30px; /* Firefox */  
+    -webkit-border-radius: 0px 0px 30px 30px ; /* Safari, Chrome */ 
+    -khtml-border-radius: 0px 0px 30px 30px ; /* Konqueror */   
+     border-radius: 0px 0px 30px 30px ; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3 */
+     box-shadow: 10px 10px 40px #000; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3 */
+
+}
+
+
+/* ::::: ESTILO MENÚ ::::: */
+
+#menuPrincipal {top: -20px; left: -125px; padding: 0; margin: 0 auto; list-style: none; position: relative; width: 500px; min-height:500px;} /*background: #fff; */
+#menuPrincipal li {display: block; width: 90px; height: 90px; position: absolute; cursor: pointer;} /* background-color: red;*/
+
+#menuPrincipal li.regUsuarios {left: 26%; top: 35px; background:url(../images/menu/usuarios.png) no-repeat center center;}
+/*#menuPrincipal li.roles {left: 12%; top: 108px; background:url(../images/menu/rol.png) no-repeat center center;}
+#menuPrincipal li.permisos {left: 75%; top: 108px; background:url(../images/menu/permisos.png) no-repeat center center;}*/
+#menuPrincipal li.tipoReuniones {left: -7%; top: 170px; background:url(../images/menu/tiposReuniones.png) no-repeat center center;}
+#menuPrincipal li.regMinutas {left: 60%; top: 165px; background:url(../images/menu/registro.png) no-repeat center center;}
+#menuPrincipal li.segAcuerdos {left: 3%; top: 337px; background:url(../images/menu/seguimiento.png) no-repeat center center;}
+#menuPrincipal li.historial {left: 50%; top: 340px; background:url(../images/menu/historial.png) no-repeat center center;}
+
+#menuPrincipal li.regMinutasr {left: 26%; top: 36px; background:url(../images/menu/registro.png) no-repeat center center;}
+#menuPrincipal li.segAcuerdosr {left:-3%; top: 297px; background:url(../images/menu/seguimiento.png) no-repeat center center;}
+#menuPrincipal li.historialr {left:57%; top: 297px; background:url(../images/menu/historial.png) no-repeat center center;}
+
+#menuPrincipal li a b {display: none;}
+#menuPrincipal li a {display: block; width: 200px; height: 200px; text-align: center; position: relative;}
+
+/*#apoyo - Lo utilicé para orientarme en la posición de las descripciones*/
+/*#apoyo {width: 200px; height: 200px; text-align: center; position: relative;
+        background: yellow; top: -350px; left: 625px; display: none;} */
+
+#menuPrincipal li a:hover b {position:absolute; display:block; width:200px; height:200px; text-align: center;}
+#menuPrincipal li a:hover b span {display:block; text-align: center;}
+
+#menuPrincipal li.regUsuarios a:hover b {left: 400px; top: 130px; display: block;}
+/*#menuPrincipal li.roles a:hover b {left: 470px; top: 102px;}
+#menuPrincipal li.permisos a:hover b {left: 219px; top: 102px; display: block;}*/
+#menuPrincipal li.tipoReuniones a:hover b {left: 580px; top: 10px; display: block;}
+#menuPrincipal li.regMinutas a:hover b {left: 230px; top: 10px; display: block;}
+#menuPrincipal li.segAcuerdos a:hover b {left: 500px; top: -165px; display: block;}
+#menuPrincipal li.historial a:hover b {left: 310px; top: -160px; display: block;}
+
+#menuPrincipal li.regMinutasr a:hover b {left: 385px; top: 142px; display: block;}
+#menuPrincipal li.segAcuerdosr a:hover b {left: 550px; top: -123px; display: block;}
+#menuPrincipal li.historialr a:hover b {left: 230px; top: -123px; display: block;}
+
+#descripciones  {top: -430px; left: 275px; padding: 0; margin: 0 auto; list-style: none; position: relative; width: 200px; height: 90px;}
+#descripciones table {font-size: 32px; color: #0d4646; border: 0px;}
+
+.opcMenu {color: #4d4d50; font-size: 20px; text-align: justify;}
+
+.descMenu {color: #507693; font-size: 15px; text-align: justify;}
+
+/* =================== ESTILO MENSAJES =================== */
+
+.correcto { margin-top:5px; margin-left: 10px; background-color: red; color: #009900; font-size: 1.3em; padding: 0.5em; text-align: center; border: 1px solid #006600; background: transparent url(../images/general/accVerde.png) 1em 50% no-repeat; width: 95.5%; min-height: 30px; height: auto; }
+
+.informacion { margin-top:5px; margin-left: 10px; background-color: #fff3f3; color: #2356a2; font-size: 1.3em; padding: 0.5em; text-align: center; border: 1px solid #2356a2; background: transparent url(../images/general/accAzul.png) 1em 50% no-repeat; width: 95.5%; min-height: 30px; height: auto; }
+
+.advertencia { margin-top:5px; margin-left: 10px; background-color: #fff3f3; color: #DF7401; font-size: 1.3em; padding: 0.5em; text-align: center; border: 1px solid #FFBF00; background: transparent url(../images/general/accAmarillo.png) 1em 50% no-repeat; width: 95.5%;  min-height: 30px; height: auto; }
+
+.error { margin-top:5px; margin-left: 10px; background-color: #fff3f3; color: #cc0000; font-size: 1.3em; padding: 0.5em; text-align: center; border: 1px solid #cc0000; background: transparent url(../images/general/accRojo.png) 1em 50% no-repeat; width: 95.5%; min-height: 30px; height: auto; }
+
+
+/* =================== ESTILO TABLA DATOS =================== */
+
+.tablaDatos {
+    border-spacing: 0;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin: 0 auto;
+}
+
+.tdDatos {
+    border-bottom: 1px solid #d0cfb1;
+    padding:.3em;
+}
+
+.tdTipoDatos {
+    background:#98aab6;
+    border-bottom: 1px solid #d0cfb1;
+    padding:.3em;
+    padding-left: .5em;
+    color: #1B2F3A;
+}
+
+.tdEncabezado {
+    background-color: #506d7b;
+    font-weight: bold;
+    text-align: center;
+    padding:.5em;
+    border-top: .20em solid #0B4C5F;
+    border-bottom: .15em solid #0B4C5F;
+    color: white;
+}
+
+.trAux {}
+
+.trAux:hover { background-color: white; }
+
+
+/* =================== ESTILO CAMPOS =================== */
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.1;
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #162B36;
+    font-weight: normal;
+    margin: 0.8em 0 0.3em 0;
+    border-bottom: 1px solid #CCCCCC;
+    margin: auto;
+    padding: 0 0.25em;
+    width: 700px;
+}
+
+h2 {
+    color: #162B36;
+    font-weight: normal;
+    margin: 0.8em 0 0.3em 0;
+    border-bottom: 1px solid #CCCCCC;
+    margin: 0.8em 1em 0.3em;
+    padding: 0 0.25em;
+    width: 700px;
+}
+
+input { font-size: 12px; padding: 4px; border: 1px solid #999999; background: #fbfbfb; }
+
+input:hover { background: #F2F2F2; }
+
+input:focus { background: #ECF8E0; }
+
+select { font-size: 12px; padding: 3px; border: 1px solid #999999; background: #fbfbfb; }
+
+select:hover { background: #F2F2F2; }
+
+select:focus { background: #ECF8E0; }
+
+textarea { font-size: 12px; padding: 4px; border: 1px solid #999999; background: #fbfbfb; resize: vertical; }
+
+textarea:hover { background: #F2F2F2; }
+
+textarea:focus { background: #ECF8E0; }
+
+.seg{
+	font-size: 12px; padding: 4px; border: 1px solid #999999; background: #fbfbfb; resize: vertical; width: 100px;}
+}
+
+/* =================== BOTONES =================== */
+
+.buttons {
+	background-color: #efefef;
+	overflow: hidden;
+	padding: 0.3em;
+	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
+	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
+	        box-shadow: 0 0 3px 1px #aaaaaa;
+	margin: 0.1em 0 0 0;
+	border: none;
+}
+
+.buttons input,
+.buttons a {
+	background-color: transparent;
+	border: 0;
+	color: #666666;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 0.25em 0;
+	overflow: visible;
+	padding: 0.25em 0.7em;
+	text-decoration: none;
+
+	   -moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	        border-radius: 0.3em;
+}
+
+.buttons input:hover, .buttons input:focus,
+.buttons a:hover, .buttons a:focus {
+	background-color: #506D7B;
+	color: #ffffff;
+	outline: none;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+	   -moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+}
+
+.no-borderradius .buttons input:hover, .no-borderradius .buttons input:focus,
+.no-borderradius .buttons a:hover, .no-borderradius .buttons a:focus {
+	background-color: transparent;
+	color: #444444;
+	text-decoration: underline;
+}
+
+.buttons .forward, .buttons .confirm, .buttons .find, .buttons .clean,.buttons .list, .buttons .delete, .buttons .edit, .buttons .save, .buttons .cancel, .buttons .add, .buttons .iniMinuta, .buttons .finMinuta {
+	background-position: 0.7em center;
+	background-repeat: no-repeat;
+	text-indent: 25px;
+}
+
+.buttons .add {
+	background-image: url(../images/botones/agregar.png);
+}
+
+.buttons .save {
+	background-image: url(../images/botones/guardar.png);
+}
+
+.buttons .cancel {
+	background-image: url(../images/botones/cancelar.png);
+}
+
+.buttons .delete {
+	background-image: url(../images/botones/eliminar.png);
+}
+
+.buttons .list {
+	background-image: url(../images/botones/lista.png);
+}
+
+.buttons .iniMinuta {
+	background-image: url(../images/botones/iniciarMinuta.png);
+}
+
+.buttons .finMinuta {
+	background-image: url(../images/botones/finalizarMinuta.png);
+}
+
+.buttons .clean {
+	background-image: url(../images/botones/limpiar.png);
+}
+
+.buttons .find {
+	background-image: url(../images/botones/buscar.png);
+}
+
+.buttons .confirm {
+	background-image: url(../images/botones/confirmar.png);
+}
+
+.buttons .forward {
+	background-image: url(../images/botones/enviarMail.png);
+}
+
+/* =================== PAGINACIÓN =================== */
+
+.pagination {
+	border-top: 0;
+	margin: 0;
+	padding: 0.3em 0.2em;
+	text-align: center;
+	   -moz-box-shadow: 0 0 3px 1px #AAAAAA;
+	-webkit-box-shadow: 0 0 3px 1px #AAAAAA;
+	        box-shadow: 0 0 3px 1px #AAAAAA;
+	background-color: #EFEFEF;
+}
+
+.pagination a,
+.pagination .currentStep {
+	color: #666666;
+	display: inline-block;
+	margin: 0 0.1em;
+	padding: 0.25em 0.7em;
+	text-decoration: none;
+	   -moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	        border-radius: 0.3em;
+}
+
+.pagination a:hover, .pagination a:focus,
+.pagination .currentStep {
+	background-color: #506D7B;
+	color: #ffffff;
+	outline: none;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.no-borderradius .pagination a:hover, .no-borderradius .pagination a:focus,
+.no-borderradius .pagination .currentStep {
+	background-color: transparent;
+	color: #444444;
+	text-decoration: underline;
+}
+
+/* ============== ocultar y mostrar ===================*/
+.ocultar{display: none}
+.mostrar{display: block}
+
+/* ============== historial ========================== */
+
+#menuHistorial {top: -20px; left: -125px; padding: 0; margin: 0 auto; list-style: none; position: relative; width: 500px; height:500;} /*background: #fff; */
+
+/*  ============================================= boton para confirmar/ cancelar en mensajes ========================================== */
+
+.button {
+	background-color: transparent;
+	overflow: hidden;
+	padding: 0.3em;
+	margin: 0.1em 0 0 0;
+        border: transparent;
+}
+
+.button input,
+.button a {
+	background-color: transparent;
+	border: 0;
+	color: #666666;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 0.25em 0;
+	overflow: visible;
+	padding: 0.25em 0.7em;
+	text-decoration: none;
+
+	   -moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	        border-radius: 0.3em;
+}
+
+.button input:hover, .button input:focus,
+.button a:hover, .button a:focus {
+	background-color: #506D7B;
+	color: #ffffff;
+	outline: none;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+	   -moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+}
+
+.no-borderradius .button input:hover, .no-borderradius .button input:focus,
+.no-borderradius .button a:hover, .no-borderradius .button a:focus {
+	background-color: transparent;
+	color: #444444;
+	text-decoration: underline;
+}
+
+.button .delete, .button .cancel, .button .add {
+	background-position: 0.7em center;
+	background-repeat: no-repeat;
+	text-indent: 25px;
+}
+
+.button .add {
+	background-image: url(../images/botones/agregar.png);
+}
+
+.button .cancel {
+	background-image: url(../images/botones/cancelar.png);
+}
+
+.button .delete {
+	background-image: url(../images/botones/confirmar.png);
+}
+ 
+
+/* ================================= class boton desavilitar =============================== */
+
+.boton {
+	background-color: #efefef;
+	overflow: hidden;
+	padding: 0.3em;
+	   -moz-box-shadow: 0 0 3px 1px #aaaaaa;
+	-webkit-box-shadow: 0 0 3px 1px #aaaaaa;
+	        box-shadow: 0 0 3px 1px #aaaaaa;
+	margin: 0.1em 0 0 0;
+	border: none;
+}
+
+.boton input,
+.boton a {
+	background-color: transparent;
+	border: 0;
+	color: #666666;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 0.25em 0;
+	overflow: visible;
+	padding: 0.25em 0.7em;
+	text-decoration: none;
+
+	   -moz-border-radius: 0.3em;
+	-webkit-border-radius: 0.3em;
+	        border-radius: 0.3em;
+}
+
+ .boton input:focus,
+ .boton a:focus {
+	background-color: #506D7B;
+	color: #ffffff;
+	outline: none;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+	   -moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	        box-shadow: none;
+}
+
+ .no-borderradius .buttons input:focus,
+ .no-borderradius .buttons a:focus {
+	background-color: transparent;
+	color: #444444;
+	text-decoration: underline;
+}
+#seleccionar{
+    width:300px;
+}

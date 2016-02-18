@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Minuta_subreport4" language="groovy" pageWidth="555" pageHeight="802" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="d8dc9f23-8c06-4bf4-b262-92a54ef915c4">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="minuta" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\027-ControlDeReuniones\\ControlDeReuniones\\web-app\\reportes\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="RUTA" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[Select distinct acuerdo.`descripcion_acuerdo`, Date_format(acuerdo.fecha_compromiso,'%d/%m/%y'), ifnull((
+        select GROUP_CONCAT(
+            nombre SEPARATOR ', '
+        ) as usuario_nombre
+
+       FROM `acuerdo` as ac, `acuerdo_usuario` as au, `usuario` as usr where ac.`id` = au.`acuerdo_id`
+       and  au.`usuario_id` = usr.`id`
+       and ac.id = au.acuerdo_id and ac.id = acuerdo.id
+    )
+    ,'') as participantes
+   FROM `acuerdo` as acuerdo WHERE acuerdo.`minuta_id` = $P{minuta};]]>
+	</queryString>
+	<field name="descripcion_acuerdo" class="java.lang.String"/>
+	<field name="fecha_compromiso" class="java.sql.Timestamp"/>
+	<field name="participantes" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="67f4f6aa-6e7d-4337-8687-b6dc71eb359c" mode="Opaque" x="25" y="41" width="269" height="20" forecolor="#FFFFFF" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.75" lineColor="#000000"/>
+					<topPen lineWidth="0.75" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Acuerdos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="aa5ffb41-5f67-4cd1-9a96-8be9da7a6647" mode="Opaque" x="294" y="41" width="45" height="20" forecolor="#FFFFFF" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.75" lineColor="#000000"/>
+					<topPen lineWidth="0.75" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="bb0a430c-9b14-4fa6-a5f0-eb5ffdb81721" mode="Opaque" x="19" y="12" width="100" height="20" backcolor="#FFFFFF"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Acuerdos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="788f3ba0-57d2-4d39-a1d8-2efdafa5bdd5" mode="Opaque" x="339" y="41" width="184" height="20" forecolor="#FFFFFF" backcolor="#999999"/>
+				<box>
+					<pen lineWidth="0.75" lineColor="#000000"/>
+					<topPen lineWidth="0.75" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Responsable]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="52" splitType="Stretch">
+			<textField>
+				<reportElement uuid="b7e83bf8-68ae-40e4-b5b2-dd5dafd8d400" x="25" y="0" width="269" height="52"/>
+				<box>
+					<pen lineWidth="0.75" lineColor="#000000"/>
+					<topPen lineWidth="0.75" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+					<paragraph leftIndent="2" rightIndent="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion_acuerdo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d8f229aa-a412-45c9-bf07-2c98386fe709" x="294" y="0" width="45" height="52"/>
+				<box>
+					<pen lineWidth="0.75" lineColor="#000000"/>
+					<topPen lineWidth="0.75" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_compromiso}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="31c72aed-08dc-4224-8e63-a1b4978db033" x="339" y="0" width="184" height="52"/>
+				<box>
+					<pen lineWidth="0.75" lineColor="#000000"/>
+					<topPen lineWidth="0.75" lineColor="#000000"/>
+					<leftPen lineWidth="0.75" lineColor="#000000"/>
+					<bottomPen lineWidth="0.75" lineColor="#000000"/>
+					<rightPen lineWidth="0.75" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{participantes}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
